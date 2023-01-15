@@ -29,11 +29,18 @@ section::before{
 }
 
 .home .asset-1 {
+    z-index: 1;
+    position: absolute;
+    top: -43px;
+    right: -20px;
     height: 380px;
     width: 380px;
 }
 
 .home .asset-2 {
+    position: relative;
+    top: 210px;
+    left: -280px;
     height: 120px;
     width: 120px;
 }
@@ -54,6 +61,7 @@ section::before{
 }
 
 .navbar{
+    z-index: 2;
     background-color: white;
     box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.25);
 }
@@ -64,6 +72,14 @@ section::before{
 
 .home h3{
     font-size: 40px;
+}
+
+.home .img{
+    width: 100%;
+}
+
+.about{
+    margin-top: 128px;
 }
 
 .about::before{
@@ -82,6 +98,10 @@ section::before{
 
 .about-exp-item-detail{
     display: none;
+}
+
+.work {
+    margin-top: 128px;
 }
 
 .work::before{
@@ -144,6 +164,7 @@ section::before{
 }
 
 .contact {
+    margin-top: 128px;
     padding-bottom: 128px;
 }
 
@@ -183,4 +204,17 @@ footer{
 .ifoot .right-foot {
     height: 80px;
     width: 100%;
+}
+
+@media only screen and (max-width: 768px){
+    .home .img{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    section::before{
+        left: -10px;
+        font-size: 64px;
+    }
 }
